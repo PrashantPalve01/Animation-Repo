@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxes</title>
+
+    <style>
+        
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .container>div>div{
+            background: linear-gradient(to right, rgb(0, 0, 79),rgb(13, 107, 145),skyblue);
+            width: 50%;
+            margin-top: 20px;
+            height: 140px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+        }
+        .box1{
+            position: absolute;
+            border-top-right-radius:10px ;
+            border-bottom-right-radius:10px ;
+            margin-left: -50%;
+            animation: leftDiv 1s  infinite;
+        }
+        .box2{
+            position: absolute;
+            top: 140px;
+            right: 0;
+            border-top-left-radius:10px ;
+            border-bottom-left-radius:10px ;
+            margin-right: -50%;
+            animation: rightDiv 1s  infinite;
+        }
+        .box3{
+            position: absolute;
+            top: 280px;
+            border-top-right-radius:10px ;
+            border-bottom-right-radius:10px ;
+            margin-left: -50%;
+            animation: leftDiv 1s  infinite;
+        }
+        .box4{
+            position: absolute;
+            top: 420px;
+            right: 0;
+            border-top-left-radius:10px ;
+            border-bottom-left-radius:10px ;
+            margin-right: -50%;
+            animation: rightDiv 1s  infinite;
+        }
+
+        @keyframes leftDiv {
+            from{
+                transform: translate(0);
+            }
+            to{
+                transform: translate(100%);
+            }
+        }   
+        @keyframes rightDiv {
+            from{
+                transform: translate(0);
+            }
+            to{
+                transform: translate(-100%);
+            }
+        }   
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div>
+            <div class="box1">Box-1</div>
+            <div class="box2">Box-2</div>
+            <div class="box3">Box-3</div>
+            <div class="box4">Box-4</div>
+        </div>
+    </div>
+</body>
+</html>
